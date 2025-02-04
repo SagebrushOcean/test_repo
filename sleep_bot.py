@@ -48,7 +48,7 @@ with sqlite3.connect('sleep_bot.db', detect_types=sqlite3.PARSE_DECLTYPES) as co
 
 @bot.message_handler(commands=["start"])
 def start(message):
-    user_name = message.from_user.first_name #username full_name
+    user_name = message.from_user.first_name
     user_id = message.from_user.id
     with sqlite3.connect('sleep_bot.db') as con:
         cursor = con.cursor()
